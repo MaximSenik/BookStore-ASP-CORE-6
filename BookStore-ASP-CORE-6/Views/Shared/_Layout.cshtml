@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewData["Title"] - Book Shop</title>
+    <link rel="stylesheet" href="/">
+</head>
+<body>
+    @if (User.Identity!.IsAuthenticated)
+    {
+        <a asp-action="Logout" asp-controller="Account">Logout</a>
+    }
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>
